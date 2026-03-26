@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Địa Lý 10 - Ôn Tập Cuối Học Kì II</title>
+    <title>Địa Lý 10 - Ôn Tập Giữa Học Kì II</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -90,7 +90,7 @@
 <div class="container">
     <!-- Home Screen -->
     <div id="home-screen">
-        <h1>ĐỊA LÝ 10 - ÔN TẬP GIỮA HỌC KÌ II</h1>
+        <h1>ĐỊA LÝ 10 - ÔN TẬP CUỐI HỌC KÌ II</h1>
         <div class="menu-grid">
             <div class="card" onclick="startMode('multiple')">
                 <h3>📝 Trắc Nghiệm Chọn Đáp Án</h3>
@@ -149,7 +149,7 @@
 <button class="btn back-btn hidden" id="back-btn" onclick="backToHome()">← Quay Lại</button>
 
 <script>
-// ==================== DỮ LIỆU 40 CÂU TRẮC NGHIỆM ====================
+// ==================== DỮ LIỆU 40 CÂU TRẮC NGHIỆM (ĐÃ SỬA THEO ẢNH BẠN GỬI) ====================
 const multipleQuestions = [
     { q: "Quy mô dân số của một quốc gia là", a: ["tổng số dân của quốc gia.", "số người trên diện tích đất.", "mật độ trung bình dân số.", "số dân quốc gia ở các nước."], c: 0 },
     { q: "Dân số thế giới năm 2020 là khoảng", a: ["khoảng 6 tỉ người.", "khoảng 7 tỉ người.", "trên 7,8 tỉ người.", "trên 8,5 tỉ người."], c: 2 },
@@ -165,7 +165,7 @@ const multipleQuestions = [
     { q: "Nguyên nhân nào sau đây có tác động mạnh mẽ nhất làm cho ở các nước đang phát triển có nam nhiều hơn nữ?", a: ["Tuổi thọ.", "Tự nhiên.", "Kinh tế.", "Tập quán."], c: 3 },
     { q: "Dân số của một quốc gia thường được phân ra các độ tuổi", a: ["0-15 tuổi, 16-64 tuổi, 65 tuổi trở lên.", "0-14 tuổi, 15-64 tuổi, 65 tuổi trở lên.", "0-14 tuổi, 15-65 tuổi, 66 tuổi trở lên.", "0-15 tuổi, 15-60 tuổi, 61 tuổi trở lên."], c: 1 },
     { q: "Tiêu chí nào sau đây được sử dụng để thể hiện tình hình phân bố dân cư?", a: ["Quy mô số dân.", "Mật độ dân số.", "Cơ cấu dân số.", "Loại quần cư."], c: 1 },
-    { q: "Khu vực có mật độ dân số cao nhất thế giới hiện nay là", a: ["Tây Âu.", "Đông Á.", "Ca-ri-bê.", "Nam Âu."], c: 1 },
+    { q: "Khu vực có mật độ dân số cao nhất thế giới hiện nay là", a: ["Tây Âu.", "Đông Á.", "Ca-ri-bê.", "Nam Âu."], c: 0 },  // ĐÃ SỬA THEO ẢNH 1: Đáp án đúng = Tây Âu
     { q: "Khu vực có mật độ dân số thấp nhất thế giới hiện nay là", a: ["Trung Phi.", "Bắc Mỹ.", "châu Đại Dương.", "Trung - Nam Á."], c: 2 },
     { q: "Phát biểu nào sau đây không đúng với đặc điểm của đô thị hoá?", a: ["Là một quá trình về văn hoá - xã hội.", "Quy mô và số lượng đô thị tăng nhanh.", "Tăng nhanh sự tập trung dân thành thị.", "Lối sống thành thị phổ biến rộng rãi."], c: 0 },
     { q: "Hoạt động có tác động trực tiếp đến việc phát triển đô thị hoá là", a: ["công nghiệp.", "giao thông vận tải.", "du lịch.", "thương mại."], c: 0 },
@@ -188,12 +188,12 @@ const multipleQuestions = [
     { q: "Phần lớn thức ăn của ngành chăn nuôi đều lấy từ nguồn nào sau đây?", a: ["Tự nhiên.", "Trồng trọt.", "Công nghiệp.", "Thủy sản."], c: 1 },
     { q: "Loại vật nuôi nào sau đây thuộc gia súc lớn?", a: ["Trâu.", "Lợn.", "Cừu.", "Dê."], c: 0 },
     { q: "Loại vật nuôi phổ biến khắp nơi trên thế giới là", a: ["Gà.", "Lợn.", "Cừu.", "Bò."], c: 0 },
-    { q: "Trong nông nghiệp, trang trại là hình thức sản xuất", a: ["nhỏ.", "lớn.", "cơ sở.", "đi đầu"], c: 1 },
+    { q: "Trong nông nghiệp, trang trại là hình thức sản xuất", a: ["nhỏ.", "lớn.", "cơ sở.", "đi đầu"], c: 2 },  // ĐÃ SỬA THEO ẢNH 2: Đáp án đúng = cơ sở
     { q: "Đặc điểm của hình thức tổ chức lãnh thổ vùng nông nghiệp là", a: ["sản xuất nhằm thoả mãn nhu cầu tiêu dùng của gia đình.", "chủ yếu là sản xuất hàng hoá, quy mô đất đai và vốn lớn.", "ra đời dựa trên tinh thần tự nguyện của các hộ nông dân.", "gồm các địa phương tương tự nhau về điều kiện sinh thái."], c: 1 },
     { q: "Vùng nông nghiệp không có ý nghĩa nào sau đây?", a: ["Làm cho phân bố nông nghiệp hợp lí.", "Cơ sở để hình thành vùng công nghiệp.", "Tạo vùng chuyên môn hoá nông nghiệp.", "Sản xuất phù hợp với điều kiện sinh thái."], c: 1 }
 ];
 
-// ==================== DỮ LIỆU 7 CÂU ĐÚNG / SAI ====================
+// ==================== DỮ LIỆU 7 CÂU ĐÚNG / SAI (không thay đổi) ====================
 const trueFalseData = [
     { title: "Câu 1: Cho bảng số liệu: QUY MÔ DÂN SỐ THẾ GIỚI, GIAI ĐOẠN 1950 – 2050 (Đơn vị: tỉ người)",
       table: `<table><tr><th>Khu vực</th><th>1950</th><th>2000</th><th>2020</th><th>2050 (dự báo)</th></tr>
@@ -269,7 +269,7 @@ const trueFalseData = [
     }
 ];
 
-// ==================== DỮ LIỆU TRẢ LỜI NGẮN ====================
+// ==================== DỮ LIỆU TRẢ LỜI NGẮN (không thay đổi) ====================
 const shortData = [
     { id: 1, title: "Câu 1. Mật độ dân số Hoa Kỳ năm 2020",
       table: `<table class="short-table"><tr><th colspan="2">Dữ liệu năm 2020</th></tr><tr><td>Dân số</td><td>331,5 triệu người</td></tr><tr><td>Diện tích lãnh thổ</td><td>9,8 triệu km²</td></tr></table>`,
